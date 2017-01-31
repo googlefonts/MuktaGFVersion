@@ -56,6 +56,11 @@ do
 done
 
 python ../build/cleanup.py
+
+# Add fake dsigs to fonts
+echo Adding dummy dsigs
+fontbakery-fix-dsig.py $FONTS --autofix
+
 echo Testing new fonts
 cd ../build
 python test.py
