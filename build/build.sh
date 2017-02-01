@@ -30,6 +30,18 @@ done
 rm *.ttx
 
 
+# We still need to backwards support the EkMukta fonts.
+# Mukta is just a renamed version of EkMukta
+
+# Duplicate Mukta fonts and rename to EkMukta.
+cp Mukta-Bold.ttf EkMukta-Bold.ttf
+cp Mukta-ExtraBold.ttf EkMukta-ExtraBold.ttf
+cp Mukta-ExtraLight.ttf EkMukta-ExtraLight.ttf
+cp Mukta-Light.ttf EkMukta-Light.ttf
+cp Mukta-Medium.ttf EkMukta-Medium.ttf
+cp Mukta-Regular.ttf EkMukta-Regular.ttf
+cp Mukta-Semibold.ttf EkMukta-Semibold.ttf
+
 FONTS=$(ls *.ttf)
 
 # Rename the font filenames to fit within our GF api Thin -> Black
@@ -60,6 +72,15 @@ python ../build/cleanup.py
 # Add fake dsigs to fonts
 echo Adding dummy dsigs
 fontbakery-fix-dsig.py $FONTS --autofix
+
+# Increase version numbers from 2.203 to 2.204
+fontbakery-update-version.py $FONTS 2.203 2.204
+# Mukta and Mukta Vaani both have name table version strings of 2.204,
+# but their head fontRevision is 2.203, if we run the script again,
+# it will update the head to 2.204
+fontbakery-update-version.py $FONTS 2.204 2.204
+python ../build/cleanup.py
+
 
 echo Testing new fonts
 cd ../build
