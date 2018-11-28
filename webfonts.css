@@ -1,0 +1,56 @@
+
+/** Mukta ExtraLight **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 200;
+    font-style: normal;
+    src: url("fonts/Mukta-ExtraLight.ttf");
+}
+
+/** Mukta  Light **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 300;
+    font-style: normal;
+    src: url("fonts/Mukta-Light.ttf");
+}
+
+/** Mukta  Regular **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 400;
+    font-style: normal;
+    src: url("fonts/Mukta-Regular.ttf");
+}
+
+/** Mukta Medium **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 500;
+    font-style: normal;
+    src: url("fonts/Mukta-Medium.ttf");
+}
+
+/** Mukta SemiBold **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 600;
+    font-style: normal;
+    src: url("fonts/Mukta-SemiBold.ttf");
+}
+
+/** Mukta Bold **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 700;
+    font-style: normal;
+    src: url("fonts/Mukta-Bold.ttf");
+}
+
+/** Mukta ExtraBold **/
+@font-face {
+    font-family: "Mukta";
+    font-weight: 800;
+    font-style: normal;
+    src: url("fonts/Mukta-ExtraBold.ttf");
+}
